@@ -212,3 +212,114 @@ header a {
 }
 
 
+a.button-slide {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #f5f5f5;
+    background-color: rgb(43, 35, 155);
+    letter-spacing: .15rem;
+    font-weight: 300;
+    font-size: 1.5em;
+    height: 5rem;
+    line-height: 5rem;
+    min-width: 35rem;
+    overflow: hidden;
+    -webkit-transition: 0.3s;
+    transition: 0.3s
+}
+
+a.button-slide span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: inherit;
+    transition: inherit
+}
+
+a.button-slide:before {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: inherit;
+    transition: inherit;
+    content: attr(data-hover);
+    color: rgb(43, 35, 155);
+}
+
+a.button-slide:hover,a.button-slide:focus {
+    background-color: #fafafa;
+}
+
+a.button-slide:hover span,a.button-slide:focus span {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+
+a.button-slide:hover:before,a.button-slide:focus:before {
+    top: 0
+}
+
+footer, .content {
+    padding: 6rem 0 3rem;
+}
+
+footer ul {
+    -webkit-transition: 1s;
+    transition: 1s
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 1rem;
+    margin-right: -.375em;
+    position: relative
+}
+
+footer ul li:before {
+    content: "";
+    display: block;
+    background-color: #e0e0e0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    line-height: 0;
+    width: 1px;
+    height: .75rem;
+    margin-top: -.375rem
+}
+
+footer ul li:first-child:before {
+    display: none
+}
+
+footer ul li a {
+    letter-spacing: .0625rem;
+    cursor: pointer
+}
+
+footer ul li a:after {
+    content: "";
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scaleX(0.6);
+    transform: scaleX(0.6);
+    -webkit-transition: .3s;
+    transition: .3s
+}
+
+footer ul li a:hover:after {
+    background-color: #1004c5;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+}
+
