@@ -211,6 +211,18 @@ header a {
     min-width: 45%;
 }
 
+@media (max-width: 768px) {
+    .case .casecontent {
+        flex-direction: column;
+    }
+    .case img{
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+}
+
 
 a.button-slide {
     position: relative;
